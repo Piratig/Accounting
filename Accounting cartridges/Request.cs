@@ -123,14 +123,12 @@ namespace Accounting_cartridges
             workSheet.Cells[1, 1] = "Служба";
             workSheet.Cells[1, 2] = "Картридж";
             workSheet.Cells[1, 3] = "Количество";
-            workSheet.Cells[1, 4] = "Дата";
             int rowExcel = 2;
             for (int i = 0; i < dgwDepartmens.Rows.Count; i++)
             {
                 workSheet.Cells[rowExcel, 1] = Convert.ToString(dgwDepartmens.Rows[i].Cells[0].Value);
                 workSheet.Cells[rowExcel, 2] = Convert.ToString(dgwDepartmens.Rows[i].Cells[1].Value);
                 workSheet.Cells[rowExcel, 3] = Convert.ToString(dgwDepartmens.Rows[i].Cells[2].Value);
-                workSheet.Cells[rowExcel, 4] = Convert.ToString(dgwDepartmens.Rows[i].Cells[3].Value);
                 rowExcel++;
             }
             workSheet.Cells[rowExcel, 1] = "Отчет сотавлен в программе Accounting cartridges. В случае не правильного вывода данных обратитесь к автору программы по электронной почте: kharkovskiy-is@mosmetro.ru или his1994@mail.ru.";
@@ -153,14 +151,12 @@ namespace Accounting_cartridges
             workSheet.Cells[1, 1] = "Картридж";
             workSheet.Cells[1, 2] = "Количество";
             workSheet.Cells[1, 3] = "Служба";
-            workSheet.Cells[1, 4] = "Дата";
             int rowExcel = 2;
             for (int i = 0; i < dgwCartridgeReport.Rows.Count; i++)
             {
                 workSheet.Cells[rowExcel, 1] = Convert.ToString(dgwCartridgeReport.Rows[i].Cells[0].Value);
                 workSheet.Cells[rowExcel, 2] = Convert.ToString(dgwCartridgeReport.Rows[i].Cells[1].Value);
                 workSheet.Cells[rowExcel, 3] = Convert.ToString(dgwCartridgeReport.Rows[i].Cells[2].Value);
-                workSheet.Cells[rowExcel, 4] = Convert.ToString(dgwCartridgeReport.Rows[i].Cells[3].Value);
                 rowExcel++;
             }
             workSheet.Cells[rowExcel, 1] = "Отчет сотавлен в программе Accounting cartridges. В случае не правильного вывода данных обратитесь к автору программы по электронной почте: kharkovskiy-is@mosmetro.ru или his1994@mail.ru.";

@@ -548,7 +548,7 @@
             this.tbpChangeItem.Location = new System.Drawing.Point(4, 22);
             this.tbpChangeItem.Name = "tbpChangeItem";
             this.tbpChangeItem.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpChangeItem.Size = new System.Drawing.Size(618, 586);
+            this.tbpChangeItem.Size = new System.Drawing.Size(618, 353);
             this.tbpChangeItem.TabIndex = 2;
             this.tbpChangeItem.Text = "Изменение записи";
             this.tbpChangeItem.UseVisualStyleBackColor = true;
@@ -734,7 +734,7 @@
             this.colQuantityChange,
             this.colStutus});
             this.dgvChage.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvChage.Location = new System.Drawing.Point(3, 340);
+            this.dgvChage.Location = new System.Drawing.Point(3, 107);
             this.dgvChage.Name = "dgvChage";
             this.dgvChage.Size = new System.Drawing.Size(612, 243);
             this.dgvChage.TabIndex = 0;
@@ -780,7 +780,7 @@
             this.tbpDeleteItem.Location = new System.Drawing.Point(4, 22);
             this.tbpDeleteItem.Name = "tbpDeleteItem";
             this.tbpDeleteItem.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpDeleteItem.Size = new System.Drawing.Size(618, 586);
+            this.tbpDeleteItem.Size = new System.Drawing.Size(618, 353);
             this.tbpDeleteItem.TabIndex = 3;
             this.tbpDeleteItem.Text = "Удаление записи";
             this.tbpDeleteItem.UseVisualStyleBackColor = true;
@@ -795,7 +795,7 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.dgvDelete.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvDelete.Location = new System.Drawing.Point(3, 299);
+            this.dgvDelete.Location = new System.Drawing.Point(3, 66);
             this.dgvDelete.Name = "dgvDelete";
             this.dgvDelete.Size = new System.Drawing.Size(612, 284);
             this.dgvDelete.TabIndex = 50;
@@ -864,6 +864,7 @@
             this.ClientSize = new System.Drawing.Size(626, 404);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.toolStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Учет картриджей";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
