@@ -33,10 +33,6 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnExportDepartment = new System.Windows.Forms.Button();
             this.dgwDepartmens = new System.Windows.Forms.DataGridView();
-            this.Department = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cartridge = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtpTill = new System.Windows.Forms.DateTimePicker();
             this.dtpSins = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,10 +43,6 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnExportCartridgRaport = new System.Windows.Forms.Button();
             this.dgwCartridgeReport = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtpTillCartridgeReport = new System.Windows.Forms.DateTimePicker();
             this.dtpSinsCartridgeReport = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
@@ -62,6 +54,12 @@
             this.tsbFullMoutheReport = new System.Windows.Forms.ToolStripButton();
             this.tsbAboutProgram = new System.Windows.Forms.ToolStripButton();
             this.tsbExit = new System.Windows.Forms.ToolStripButton();
+            this.Department = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cartridge = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwDepartmens)).BeginInit();
@@ -117,8 +115,7 @@
             this.dgwDepartmens.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Department,
             this.Cartridge,
-            this.Quantity,
-            this.Date});
+            this.Quantity});
             this.dgwDepartmens.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgwDepartmens.Location = new System.Drawing.Point(3, 117);
             this.dgwDepartmens.Name = "dgwDepartmens";
@@ -130,32 +127,6 @@
             this.dgwDepartmens.TabIndex = 8;
             this.dgwDepartmens.TabStop = false;
             // 
-            // Department
-            // 
-            this.Department.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Department.HeaderText = "Служба";
-            this.Department.Name = "Department";
-            this.Department.ReadOnly = true;
-            this.Department.Width = 70;
-            // 
-            // Cartridge
-            // 
-            this.Cartridge.HeaderText = "Картридж";
-            this.Cartridge.Name = "Cartridge";
-            this.Cartridge.ReadOnly = true;
-            // 
-            // Quantity
-            // 
-            this.Quantity.HeaderText = "Количесво";
-            this.Quantity.Name = "Quantity";
-            this.Quantity.ReadOnly = true;
-            // 
-            // Date
-            // 
-            this.Date.HeaderText = "Дата";
-            this.Date.Name = "Date";
-            this.Date.ReadOnly = true;
-            // 
             // dtpTill
             // 
             this.dtpTill.Location = new System.Drawing.Point(262, 54);
@@ -164,7 +135,6 @@
             this.dtpTill.Name = "dtpTill";
             this.dtpTill.Size = new System.Drawing.Size(143, 20);
             this.dtpTill.TabIndex = 7;
-            this.dtpTill.Visible = false;
             // 
             // dtpSins
             // 
@@ -174,7 +144,6 @@
             this.dtpSins.Name = "dtpSins";
             this.dtpSins.Size = new System.Drawing.Size(141, 20);
             this.dtpSins.TabIndex = 6;
-            this.dtpSins.Visible = false;
             // 
             // label3
             // 
@@ -184,7 +153,6 @@
             this.label3.Size = new System.Drawing.Size(21, 13);
             this.label3.TabIndex = 5;
             this.label3.Text = "По";
-            this.label3.Visible = false;
             // 
             // label2
             // 
@@ -194,7 +162,6 @@
             this.label2.Size = new System.Drawing.Size(14, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "С";
-            this.label2.Visible = false;
             // 
             // btnCreateReport
             // 
@@ -306,8 +273,7 @@
             this.dgwCartridgeReport.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn4});
+            this.dataGridViewTextBoxColumn1});
             this.dgwCartridgeReport.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgwCartridgeReport.Location = new System.Drawing.Point(3, 103);
             this.dgwCartridgeReport.Name = "dgwCartridgeReport";
@@ -318,32 +284,6 @@
             this.dgwCartridgeReport.Size = new System.Drawing.Size(576, 290);
             this.dgwCartridgeReport.TabIndex = 15;
             this.dgwCartridgeReport.TabStop = false;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Картридж";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Количесво";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Служба";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 70;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Дата выдачи";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // dtpTillCartridgeReport
             // 
@@ -371,7 +311,6 @@
             this.label4.Size = new System.Drawing.Size(21, 13);
             this.label4.TabIndex = 12;
             this.label4.Text = "По";
-            this.label4.Visible = false;
             // 
             // label5
             // 
@@ -381,7 +320,6 @@
             this.label5.Size = new System.Drawing.Size(14, 13);
             this.label5.TabIndex = 11;
             this.label5.Text = "С";
-            this.label5.Visible = false;
             // 
             // btnCartridgeReport
             // 
@@ -537,6 +475,46 @@
             this.tsbExit.Text = "Выход";
             this.tsbExit.Click += new System.EventHandler(this.tsbExit_Click);
             // 
+            // Department
+            // 
+            this.Department.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Department.HeaderText = "Служба";
+            this.Department.Name = "Department";
+            this.Department.ReadOnly = true;
+            this.Department.Width = 70;
+            // 
+            // Cartridge
+            // 
+            this.Cartridge.HeaderText = "Картридж";
+            this.Cartridge.Name = "Cartridge";
+            this.Cartridge.ReadOnly = true;
+            // 
+            // Quantity
+            // 
+            this.Quantity.HeaderText = "Количесво";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Картридж";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Количесво";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Служба";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 70;
+            // 
             // Request
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -586,16 +564,14 @@
         private System.Windows.Forms.TextBox txbCartridgeReport;
         private System.Windows.Forms.DataGridView dgwDepartmens;
         private System.Windows.Forms.DataGridView dgwCartridgeReport;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Department;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cartridge;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.Button btnExportDepartment;
         private System.Windows.Forms.ToolStripButton tsbAboutProgram;
         private System.Windows.Forms.Button btnExportCartridgRaport;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Department;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cartridge;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
     }
 }

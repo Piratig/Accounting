@@ -53,7 +53,7 @@ namespace Accounting_cartridges
                 !string.IsNullOrEmpty(txbCartridge.Text) && !string.IsNullOrWhiteSpace(txbCartridge.Text) &&
                 !string.IsNullOrEmpty(txbQuantity.Text) && !string.IsNullOrWhiteSpace(txbQuantity.Text))
             {
-                SqlCommand command = new SqlCommand(/*str*/"INSERT INTO [Cartridges] (RequestId, InventaryNumber, Department, Cartridge, Quantity, DeliveryDate, Status)VALUES(@RequestId, @InventaryNumber, @Department, @Cartridge, @Quantity, @DeliveryDate, @Status)", sqlConnection);
+                SqlCommand command = new SqlCommand("INSERT INTO [Cartridges] (RequestId, InventaryNumber, Department, Cartridge, Quantity, DeliveryDate, Status)VALUES(@RequestId, @InventaryNumber, @Department, @Cartridge, @Quantity, @DeliveryDate, @Status)", sqlConnection);
                 command.Parameters.AddWithValue("RequestId", txbRequest.Text);
                 command.Parameters.AddWithValue("InventaryNumber", inventary);
                 command.Parameters.AddWithValue("Department", txbDepartment.Text);

@@ -32,9 +32,12 @@ namespace Accounting_cartridges
         private async void btnCreateReport_Click(object sender, EventArgs e)
         {
             SqlDataReader sqlReader = null;
-            string str = String.Format("SELECT [Department], [Cartridge], COUNT(*) FROM [Cartridges] WHERE [Department] = N'{0}' GROUP BY [Cartridge], [Department]", txbDepartment.Text);
-
+            string str = String.Format("SELECT [Department], [Cartridge], COUNT(*) FROM [Cartridges] WHERE [Department] = N'{0}' AND [DeliveryDate] BETWEEN @DateSins AND @DateTill GROUP BY [Cartridge], [Department]", txbDepartment.Text);
             SqlCommand command = new SqlCommand(str, sqlConnection);
+            command.Parameters.AddWithValue("Department", txbDepartment.Text);
+            command.Parameters.AddWithValue("DateSins", dtpSins.Value);
+            command.Parameters.AddWithValue("DateTill", dtpTill.Value);
+            command.ExecuteNonQuery();
 
             dgwDepartmens.Rows.Clear();
 
@@ -43,10 +46,11 @@ namespace Accounting_cartridges
                 sqlReader = await command.ExecuteReaderAsync();
                 while (await sqlReader.ReadAsync())
                 {
-                    string[] data = new string[3];
+                    string[] data = new string[4];
                     data[0] = sqlReader[0].ToString();
                     data[1] = sqlReader[1].ToString();
                     data[2] = sqlReader[2].ToString();
+
                     dgwDepartmens.Rows.Add(data);
                 }
             }
@@ -77,11 +81,13 @@ namespace Accounting_cartridges
 
         private async void btnCartridgeReport_Click(object sender, EventArgs e)
         {
+            dgwCartridgeReport.Rows.Clear(); 
             SqlDataReader sqlReader = null;
-
-            string str = String.Format("SELECT [Department], [Cartridge], COUNT(*) FROM [Cartridges] WHERE [Cartridge] = '{0}' AND [DeliveryDate] BETWEEN N'{1}' AND N'{2}' GROUP BY [Department], [Cartridge]", txbCartridgeReport.Text, dtpSinsCartridgeReport.Value, dtpTillCartridgeReport.Value);
-
-            SqlCommand command = new SqlCommand(str, sqlConnection);
+            SqlCommand command = new SqlCommand("SELECT [Department], [Cartridge], COUNT(*) FROM [Cartridges] WHERE [Cartridge] = @Cartridge AND [DeliveryDate] BETWEEN @DateSins AND @DateTill GROUP BY [Department], [Cartridge], [DeliveryDate]", sqlConnection);
+            command.Parameters.AddWithValue("Cartridge", txbCartridgeReport.Text);
+            command.Parameters.AddWithValue("DateSins", dtpSinsCartridgeReport.Value);
+            command.Parameters.AddWithValue("DateTill", dtpTillCartridgeReport.Value);
+            command.ExecuteNonQuery();
 
             dgwDepartmens.Rows.Clear();
 
@@ -169,7 +175,7 @@ namespace Accounting_cartridges
 
             SqlDataReader sqlReader = null;
 
-            string str = String.Format("SELECT [Department], [Cartridge], COUNT(*) FROM [Cartridges] WHERE [DeliveryDate] BETWEEN {0} AND {1} GROUP BY [Department], [Cartridge]", dtpSinsCartridgeReport.Value, dtpTillCartridgeReport.Value);
+            string str = String.Format("SELECT [Department], [Cartridge], COUNT(*), [Status] FROM [Cartridges] GROUP BY [Department], [Cartridge], [Status]", dtpSinsCartridgeReport.Value, dtpTillCartridgeReport.Value);
 
             SqlCommand command = new SqlCommand(str, sqlConnection);
 
@@ -182,6 +188,8 @@ namespace Accounting_cartridges
                 workSheet.Cells[1, 1] = "Картридж";
                 workSheet.Cells[1, 2] = "Количество";
                 workSheet.Cells[1, 3] = "Служба";
+                workSheet.Cells[1, 4] = "Статус";
+
                 int rowExcel = 2;
                 while (await sqlReader.ReadAsync())
                 {
@@ -190,6 +198,7 @@ namespace Accounting_cartridges
                         workSheet.Cells[rowExcel, 1] = sqlReader[1].ToString();
                         workSheet.Cells[rowExcel, 2] = sqlReader[2].ToString();
                         workSheet.Cells[rowExcel, 3] = sqlReader[0].ToString();
+                        workSheet.Cells[rowExcel, 4] = sqlReader[3].ToString();
                         rowExcel++;
                     } 
                 }
