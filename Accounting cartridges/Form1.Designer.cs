@@ -49,7 +49,6 @@
             this.txbQuantity = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.txbDelivery = new System.Windows.Forms.Button();
             this.txbDepartment = new System.Windows.Forms.TextBox();
             this.txbCartridge = new System.Windows.Forms.TextBox();
             this.txbInventoryNumber = new System.Windows.Forms.TextBox();
@@ -148,7 +147,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 25);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(626, 379);
+            this.tabControl1.Size = new System.Drawing.Size(626, 358);
             this.tabControl1.TabIndex = 1;
             // 
             // tpbNewItem
@@ -163,7 +162,6 @@
             this.tpbNewItem.Controls.Add(this.txbQuantity);
             this.tpbNewItem.Controls.Add(this.label8);
             this.tpbNewItem.Controls.Add(this.btnAdd);
-            this.tpbNewItem.Controls.Add(this.txbDelivery);
             this.tpbNewItem.Controls.Add(this.txbDepartment);
             this.tpbNewItem.Controls.Add(this.txbCartridge);
             this.tpbNewItem.Controls.Add(this.txbInventoryNumber);
@@ -177,14 +175,14 @@
             this.tpbNewItem.Location = new System.Drawing.Point(4, 22);
             this.tpbNewItem.Name = "tpbNewItem";
             this.tpbNewItem.Padding = new System.Windows.Forms.Padding(3);
-            this.tpbNewItem.Size = new System.Drawing.Size(618, 353);
+            this.tpbNewItem.Size = new System.Drawing.Size(618, 332);
             this.tpbNewItem.TabIndex = 0;
             this.tpbNewItem.Text = "Новая запись";
             this.tpbNewItem.UseVisualStyleBackColor = true;
             // 
             // btnOrder
             // 
-            this.btnOrder.Location = new System.Drawing.Point(445, 322);
+            this.btnOrder.Location = new System.Drawing.Point(377, 303);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Size = new System.Drawing.Size(79, 23);
             this.btnOrder.TabIndex = 47;
@@ -194,7 +192,7 @@
             // 
             // btnPurchase
             // 
-            this.btnPurchase.Location = new System.Drawing.Point(530, 322);
+            this.btnPurchase.Location = new System.Drawing.Point(530, 303);
             this.btnPurchase.Name = "btnPurchase";
             this.btnPurchase.Size = new System.Drawing.Size(80, 23);
             this.btnPurchase.TabIndex = 46;
@@ -204,7 +202,7 @@
             // 
             // btnReserv
             // 
-            this.btnReserv.Location = new System.Drawing.Point(357, 322);
+            this.btnReserv.Location = new System.Drawing.Point(143, 303);
             this.btnReserv.Name = "btnReserv";
             this.btnReserv.Size = new System.Drawing.Size(82, 23);
             this.btnReserv.TabIndex = 45;
@@ -262,7 +260,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(8, 303);
+            this.label7.Location = new System.Drawing.Point(282, 308);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(35, 13);
             this.label7.TabIndex = 42;
@@ -298,22 +296,13 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(282, 322);
+            this.btnAdd.Location = new System.Drawing.Point(11, 303);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(69, 23);
             this.btnAdd.TabIndex = 38;
             this.btnAdd.Text = "Выдать";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
-            // 
-            // txbDelivery
-            // 
-            this.txbDelivery.Location = new System.Drawing.Point(11, 322);
-            this.txbDelivery.Name = "txbDelivery";
-            this.txbDelivery.Size = new System.Drawing.Size(75, 23);
-            this.txbDelivery.TabIndex = 37;
-            this.txbDelivery.Text = "Выдача";
-            this.txbDelivery.UseVisualStyleBackColor = true;
             // 
             // txbDepartment
             // 
@@ -548,7 +537,7 @@
             this.tbpChangeItem.Location = new System.Drawing.Point(4, 22);
             this.tbpChangeItem.Name = "tbpChangeItem";
             this.tbpChangeItem.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpChangeItem.Size = new System.Drawing.Size(618, 353);
+            this.tbpChangeItem.Size = new System.Drawing.Size(618, 332);
             this.tbpChangeItem.TabIndex = 2;
             this.tbpChangeItem.Text = "Изменение записи";
             this.tbpChangeItem.UseVisualStyleBackColor = true;
@@ -734,9 +723,9 @@
             this.colQuantityChange,
             this.colStutus});
             this.dgvChage.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvChage.Location = new System.Drawing.Point(3, 107);
+            this.dgvChage.Location = new System.Drawing.Point(3, 84);
             this.dgvChage.Name = "dgvChage";
-            this.dgvChage.Size = new System.Drawing.Size(612, 243);
+            this.dgvChage.Size = new System.Drawing.Size(612, 245);
             this.dgvChage.TabIndex = 0;
             this.dgvChage.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChage_CellClick);
             // 
@@ -780,7 +769,7 @@
             this.tbpDeleteItem.Location = new System.Drawing.Point(4, 22);
             this.tbpDeleteItem.Name = "tbpDeleteItem";
             this.tbpDeleteItem.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpDeleteItem.Size = new System.Drawing.Size(618, 353);
+            this.tbpDeleteItem.Size = new System.Drawing.Size(618, 332);
             this.tbpDeleteItem.TabIndex = 3;
             this.tbpDeleteItem.Text = "Удаление записи";
             this.tbpDeleteItem.UseVisualStyleBackColor = true;
@@ -795,9 +784,9 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.dgvDelete.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvDelete.Location = new System.Drawing.Point(3, 66);
+            this.dgvDelete.Location = new System.Drawing.Point(3, 46);
             this.dgvDelete.Name = "dgvDelete";
-            this.dgvDelete.Size = new System.Drawing.Size(612, 284);
+            this.dgvDelete.Size = new System.Drawing.Size(612, 283);
             this.dgvDelete.TabIndex = 50;
             this.dgvDelete.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDelete_CellClick);
             // 
@@ -861,7 +850,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(626, 404);
+            this.ClientSize = new System.Drawing.Size(626, 383);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.toolStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -904,7 +893,6 @@
         private System.Windows.Forms.TextBox txbQuantity;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button txbDelivery;
         private System.Windows.Forms.TextBox txbDepartment;
         private System.Windows.Forms.TextBox txbCartridge;
         private System.Windows.Forms.TextBox txbInventoryNumber;

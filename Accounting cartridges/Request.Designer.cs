@@ -117,13 +117,13 @@
             this.Cartridge,
             this.Quantity});
             this.dgwDepartmens.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgwDepartmens.Location = new System.Drawing.Point(3, 117);
+            this.dgwDepartmens.Location = new System.Drawing.Point(3, 83);
             this.dgwDepartmens.Name = "dgwDepartmens";
             this.dgwDepartmens.ReadOnly = true;
             this.dgwDepartmens.RowTemplate.ReadOnly = true;
             this.dgwDepartmens.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgwDepartmens.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgwDepartmens.Size = new System.Drawing.Size(576, 276);
+            this.dgwDepartmens.Size = new System.Drawing.Size(576, 310);
             this.dgwDepartmens.TabIndex = 8;
             this.dgwDepartmens.TabStop = false;
             // 
@@ -295,13 +295,13 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn1});
             this.dgwCartridgeReport.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgwCartridgeReport.Location = new System.Drawing.Point(3, 103);
+            this.dgwCartridgeReport.Location = new System.Drawing.Point(3, 82);
             this.dgwCartridgeReport.Name = "dgwCartridgeReport";
             this.dgwCartridgeReport.ReadOnly = true;
             this.dgwCartridgeReport.RowTemplate.ReadOnly = true;
             this.dgwCartridgeReport.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgwCartridgeReport.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgwCartridgeReport.Size = new System.Drawing.Size(576, 290);
+            this.dgwCartridgeReport.Size = new System.Drawing.Size(576, 311);
             this.dgwCartridgeReport.TabIndex = 15;
             this.dgwCartridgeReport.TabStop = false;
             // 

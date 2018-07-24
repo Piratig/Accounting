@@ -99,8 +99,11 @@ namespace Accounting_cartridges
 
         private void StatusChange(string status)
         {
-            string str = String.Format("UPDATE [Cartridges] SET [Status] = N'{0}', WHERE [Id] = N'{1}'", status, indexRow);
-            SqlCommand command = new SqlCommand(str, sqlConnection);
+            //string str = String.Format("UPDATE [Cartridges] SET [Status] = @Status, WHERE [Id] = @Id", status, indexRow);
+            SqlCommand command = new SqlCommand("UPDATE [Cartridges] SET [Status] = @Status WHERE [Id] = @Id", sqlConnection);
+            command.Parameters.AddWithValue("Status", status);
+            command.Parameters.AddWithValue("Id", indexRow);
+            command.ExecuteNonQuery();
         }
 
         private void dgvDelete_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -146,7 +149,7 @@ namespace Accounting_cartridges
 
         private void btnAddChange_Click(object sender, EventArgs e)
         {
-            StatusChange("1");
+            StatusChange("Выдано");
         }
 
         private async void btnSearchDelete_Click(object sender, EventArgs e)
@@ -269,17 +272,17 @@ namespace Accounting_cartridges
 
         private void btnReservChange_Click(object sender, EventArgs e)
         {
-            StatusChange("2");
+            StatusChange("Зарезервировано");
         }
 
         private void btnOrderChange_Click(object sender, EventArgs e)
         {
-            StatusChange("3");
+            StatusChange("Заказано");
         }
 
         private void btnBuyChange_Click(object sender, EventArgs e)
         {
-            StatusChange("4");
+            StatusChange("Ожидание закупки");
         }
 
         #endregion
